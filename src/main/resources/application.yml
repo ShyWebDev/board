@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: board
+
+server:
+  port: 8082
+  #swagger-enabled: true
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+    context-path: /board
