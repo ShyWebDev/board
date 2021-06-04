@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 env:
-  DOCKER_IMAGE: ghcr.io/{Repository author}/{Repository name} # 예를 들면, ghcr.io/dolphago/github-follow-unfollow
+  DOCKER_IMAGE: ghcr.io/wstlits/board
   VERSION: ${{ github.sha }}
   
 jobs:
