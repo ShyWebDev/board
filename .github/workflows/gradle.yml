@@ -62,6 +62,6 @@ jobs:
           password: ${{ secrets.J_S_PAT }}
       - name: Docker run
         run: |
-          docker ps -q --filter "name={your image name}" | grep -q . && docker stop boardDocker && docker rm -fv boardDocker
+          docker ps -q --filter "name=board" | grep -q . && docker stop boardDocker && docker rm -fv boardDocker
           docker run -d -p 8080:8080 --name cicd --restart always ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
 
