@@ -6,4 +6,5 @@ files:
 hooks:
   AfterInstall:
     - location: /board-stop.sh
-      runas: root
+  ApplicationStart:
+    - location: /board-start.sh
