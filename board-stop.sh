@@ -18,3 +18,6 @@ else
   kill -9 $CURRENT_PID
   sleep 30
 fi
+
+echo "> $JAR_PATH 배포"
+nohup java -jar $JAR_PATH &
