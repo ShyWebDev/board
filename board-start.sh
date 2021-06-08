@@ -8,6 +8,7 @@ JAR_NAME=$(ls $REPOSITORY/| grep '.jar' | tail -n 1)
 JAR_PATH=$REPOSITORY/$JAR_NAME
 
 CURRENT_PID=$(pgrep -f $APP_NAME)
+echo "> pid $CURRENT_PID"
 
 if [ -z $CURRENT_PID ]
 then
