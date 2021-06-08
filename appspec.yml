@@ -4,6 +4,6 @@ files:
   - source: /
     destination: /home/ssungis/apiGateway/board
 hooks:
-  BeforInstall:
+  AfterInstall:
     - location: /board-stop.sh
       runas: root

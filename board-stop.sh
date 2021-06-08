@@ -12,6 +12,7 @@ CURRENT_PID=$(pgrep -f $APP_NAME)
 if [ -z $CURRENT_PID ]
 then
   echo "> 종료할것 없음."
+  sleep 30
 else
   echo "> kill -9 $CURRENT_PID"
   kill -9 $CURRENT_PID
