@@ -5,7 +5,11 @@ files:
     destination: /home/ssungis/apiGateway/board
 
 hooks:
+  BeforInstall:
+    - location: board-stop.sh
+      timeout: 60
+      runas: root
   AfterInstall:
-    - location: board-deploy.sh
+    - location: board-start.sh
       timeout: 60
       runas: root
