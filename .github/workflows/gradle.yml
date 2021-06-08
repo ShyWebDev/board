@@ -63,7 +63,7 @@ jobs:
       run: |
         aws deploy create-deployment \
         --application-name board \
-        --deployment-group-name board \
+        --deployment-group-name board-deploy-group \
         --file-exists-behavior OVERWRITE \
         --s3-location bucket=spring-boot-board,bundleType=zip,key=spring-boot-board-build.zip \
         --region ap-northeast-2
