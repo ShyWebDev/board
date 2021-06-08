@@ -34,7 +34,10 @@ jobs:
     
     - name: Copy Jar
       run: cp ./build/libs/*.jar ./deploy/    
-        
+    
+    - name: Make zip file
+      run: zip -r -qq -j ./spring-boot-board-build.zip ./deploy 
+      
     - name: Deploy                  # Upload build file to S3
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
@@ -43,4 +46,4 @@ jobs:
         aws s3 cp \
         --region ap-northeast-2 \
         --acl private \
-        ./*.zip s3://spring-boot-board/
+        ./spring-boot-board-build.zip s3://spring-boot-board/
