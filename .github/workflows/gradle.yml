@@ -33,11 +33,7 @@ jobs:
       run: mkdir deploy
     
     - name: Copy Jar
-      run: cp ./build/libs/*.jar ./deploy/
-      
-    - name: Make zip file
-      run: zip -r -qq -j ./spring-boot-board-build.zip ./deploy     
-    
+      run: cp ./build/libs/*.jar ./deploy/    
         
     - name: Deploy                  # Upload build file to S3
       env:
@@ -47,4 +43,4 @@ jobs:
         aws s3 cp \
         --region ap-northeast-2 \
         --acl private \
-        ./spring-boot-board-build.zip s3://spring-boot-board/
+        ./*.zip s3://spring-boot-board/
