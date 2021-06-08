@@ -16,7 +16,6 @@ then
 else
   echo "> kill -9 $CURRENT_PID"
   kill -9 $CURRENT_PID
-  sleep 5
 fi
 
 echo "> $JAR_PATH 배포"
