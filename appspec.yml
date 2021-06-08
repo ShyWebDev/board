@@ -9,7 +9,3 @@ hooks:
     - location: board-stop.sh
       timeout: 60
       runas: root
-  AfterInstall:
-    - location: board-start.sh
-      timeout: 60
-      runas: root
