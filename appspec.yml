@@ -3,9 +3,8 @@ os: linux
 files:
   - source: /
     destination: /home/ssungis/apiGateway/board
-
 hooks:
   BeforInstall:
-    - location: board-stop.sh
+    - location: ./board-stop.sh
       timeout: 60
       runas: root
