@@ -6,6 +6,6 @@ files:
 
 hooks:
   AfterInstall:
-    - location: ./board-start.sh
+    - location: board-start.sh
       timeout: 60
       runas: root
