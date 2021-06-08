@@ -5,6 +5,5 @@ files:
     destination: /home/ssungis/apiGateway/board
 hooks:
   BeforInstall:
-    - location: ./board-stop.sh
-      timeout: 60
+    - location: /board-stop.sh
       runas: root
