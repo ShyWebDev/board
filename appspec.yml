@@ -6,6 +6,6 @@ files:
 
 hooks:
   AfterInstall:
-    - location: /home/ssungis/apiGateway/board/board-deploy.sh
+    - location: board-deploy.sh
       timeout: 60
       runas: root
