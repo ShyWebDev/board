@@ -3,3 +3,9 @@ os: linux
 files:
   - source: /
     destination: /home/ssungis/apiGateway/board
+
+hooks:
+  AfterInstall:
+    - location: board-deploy.sh
+      timeout: 60
+      runas: root
