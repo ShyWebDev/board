@@ -6,9 +6,6 @@ cd $REPOSITORY
 JAR_NAME=$(ls $REPOSITORY/| grep '.jar' | tail -n 1)
 JAR_PATH=$REPOSITORY/$JAR_NAME
 
-echo "> JAR_NAME $JAR_NAME"
-echo "> JAR_PATH $JAR_PATH"
-
 CURRENT_PID=$(pgrep -f $JAR_NAME)
 
 if [ -z $CURRENT_PID ]
@@ -17,7 +14,8 @@ then
 else
   echo "> kill -9 $CURRENT_PID"
   kill -9 $CURRENT_PID
+  sleep 5
 fi
 
 echo "> $JAR_PATH 배포"
-nohup java -jar $JAR_PATH &
+nohup java -jar $JAR_PATH > /dev/null 2> /dev/null < /dev/null &
