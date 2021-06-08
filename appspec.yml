@@ -5,6 +5,6 @@ files:
     destination: /home/ssungis/apiGateway/board
 hooks:
   AfterInstall:
-    - location: /board-stop.sh
+    - location: board-stop.sh
   ApplicationStart:
-    - location: /board-start.sh
+    - location: board-start.sh
