@@ -17,6 +17,6 @@ public class TestController {
     @GetMapping("")
     @ApiOperation(value = "board Test API")
     public String getTest(){
-        return "board10";
+        return "board11";
     }
 }
