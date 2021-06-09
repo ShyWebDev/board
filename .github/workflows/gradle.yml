@@ -66,8 +66,8 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
       run: |
         aws deploy create-deployment \
-        --application-name springboot-board-deploy \
-        --deployment-group-name springboot-board-deploy-group \
+        --application-name ssungisDeployApp \
+        --deployment-group-name ssungisDeployBoardGroup \
         --file-exists-behavior OVERWRITE \
         --s3-location bucket=ssungisbucket,bundleType=zip,key=spring-boot-board-build.zip \
         --region ap-northeast-2
